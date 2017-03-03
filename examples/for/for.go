@@ -27,12 +27,12 @@ func main() {
         break
     }
 
-    // You can also `continue` to the next iteration of
-    // the loop.
-    for n := 0; n <= 5; n++ {
-        if n%2 == 0 {
-            continue
+    // Show leap year
+    for n := 1875; n <= 2017; n++ {
+        if n%4 == 0 && n%100 != 0 || n%400 == 0 {
+            fmt.Printf("%d, ", n)
+        } else if n%100 == 0 {
+            fmt.Println();
         }
-        fmt.Println(n)
     }
 }
