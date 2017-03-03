@@ -4,6 +4,7 @@
 package main
 
 import "fmt"
+import "math/big"
 
 func main() {
 
@@ -39,4 +40,16 @@ func main() {
         }
     }
     fmt.Println("2d: ", twoD)
+
+    // Try 3d array
+    fmt.Println("Joint probability distribution");
+    var threeD [2][3][4]*big.Rat
+    for i := 0; i < 2; i++ {
+        for j := 0; j < 3; j++ {
+            for k := 0; k < 4; k++ {
+                threeD[i][j][k] = big.NewRat(int64(i + j + k),42)
+            }
+        }
+    }
+    fmt.Println("3d: ", threeD)
 }
