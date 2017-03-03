@@ -5,6 +5,7 @@ package main
 
 import "fmt"
 import "math"
+import "math/big"
 
 // `const` declares a constant value.
 const s string = "constant"
@@ -24,6 +25,10 @@ func main() {
     // A numeric constant has no type until it's given
     // one, such as by an explicit cast.
     fmt.Println(int64(d))
+
+    fmt.Println(5./11);
+    fmt.Println(math.Pow(3,20));
+    fmt.Println(new(big.Int).Exp(big.NewInt(5), big.NewInt(20), nil));
 
     // A number can be given a type by using it in a
     // context that requires one, such as a variable
